@@ -1,0 +1,12 @@
+<div>
+    <label for="name">{{labelFields.name}}</label>
+    <input type="text" name="name" id="name" [(ngModel)]="employee.name">
+    <label for="salary" >{{labelFields.salary}}</label>
+    <input type="text" name="salary" id="salary" [(ngModel)]="employee.salary">
+</div>
+<div [hidden]="employee.salary > 1000">
+    <label for="bonus" >{{labelFields.bonus}}</label>
+    <input type="text" name="bonus" id="bonus" [(ngModel)]="employee.bonus">
+</div>
+<br>
+<button type="button" (click)="addEmployee($event)">Adicionar empregado</button>
